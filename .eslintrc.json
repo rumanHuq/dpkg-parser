@@ -1,0 +1,121 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:prettier/recommended"
+  ],
+  "globals": {
+    "React": "writable"
+  },
+  "overrides": [
+    {
+      "files": "src/pages/**/**.tsx",
+      "rules": {
+        "import/no-default-export": 0
+      }
+    },
+    {
+      "files": "src/pages/**/**.ts",
+      "rules": {
+        "import/no-default-export": 0
+      }
+    }
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "import"
+  ],
+  "root": true,
+  "rules": {
+    "@typescript-eslint/ban-ts-comment": 0,
+    "@typescript-eslint/no-shadow": 2,
+    "@typescript-eslint/no-unsafe-argument": 0,
+    "@typescript-eslint/no-unsafe-assignment": 0,
+    "@typescript-eslint/no-unsafe-call": 0,
+    "@typescript-eslint/no-unsafe-member-access": 0,
+    "@typescript-eslint/no-unsafe-return": 0,
+    "@typescript-eslint/no-unused-vars": 2,
+    "@typescript-eslint/no-use-before-define": [
+      "error"
+    ],
+    "import/extensions": 0,
+    "import/no-default-export": 2,
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "caseInsensitive": false,
+          "order": "asc"
+        },
+        "pathGroups": [
+          {
+            "group": "external",
+            "pattern": "@/**",
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": [
+          "builtin"
+        ]
+      }
+    ],
+    "import/prefer-default-export": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "no-param-reassign": 0,
+    "no-shadow": 0,
+    "no-use-before-define": "off",
+    "no-void": 0,
+    "prettier/prettier": "error",
+    "react/destructuring-assignment": 0,
+    "react/function-component-definition": 0,
+    "react/jsx-filename-extension": [
+      2,
+      {
+        "extensions": [
+          ".tsx",
+          ".jsx"
+        ]
+      }
+    ],
+    "react/jsx-props-no-spreading": 0,
+    "react/no-array-index-key": 0,
+    "react/no-unknown-property": 0,
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/require-default-props": 0
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
+    },
+    "import/resolver": {
+      "alias": {
+        "extensions": [
+          ".ts",
+          ".tsx",
+          ".json"
+        ],
+        "map": [
+          [
+            "@",
+            "./src/"
+          ]
+        ]
+      },
+      "eslint-import-resolver-typescript": true
+    }
+  }
+}

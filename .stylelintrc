@@ -1,0 +1,47 @@
+{
+  "overrides": [
+    {
+      "extends": [
+        "stylelint-config-sass-guidelines",
+        "stylelint-prettier/recommended"
+      ],
+      "files": [
+        "**/*.scss"
+      ],
+      "customSyntax": "postcss-scss"
+    },
+    {
+      "extends": [
+        "stylelint-config-styled-components",
+        "stylelint-config-sass-guidelines",
+        "stylelint-prettier/recommended"
+      ],
+      "files": [
+        "**/*.{ts,tsx}"
+      ],
+      "customSyntax": "@stylelint/postcss-css-in-js"
+    }
+  ],
+  "rules": {
+    "declaration-bang-space-before": null,
+    "font-family-no-missing-generic-family-keyword": null,
+    "function-name-case": null,
+    "function-url-quotes": null,
+    "max-nesting-depth": null,
+    "property-no-unknown": null,
+    "selector-class-pattern": null,
+    "selector-max-compound-selectors": null,
+    "selector-max-id": 1,
+    "selector-no-qualifying-type": [
+      true,
+      {
+        "ignore": [
+          "attribute",
+          "class",
+          "id"
+        ]
+      }
+    ]
+  },
+  "syntax": "scss"
+}
